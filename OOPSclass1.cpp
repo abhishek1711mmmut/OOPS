@@ -134,7 +134,7 @@ int main()
     fifth.values[1] = 123;
     cout << "after changing fifth, value of copyOfFifth at 1st index " << copyOfFifth.values[1] << endl;
 
-    // To dynamically allocated object, we have to manually use delete keyword
+    // To destruct dynamically allocated object, we have to manually use delete keyword (statically allocated objects deleted automatically by calling destructor)
     delete third;
     delete fourth;
 }
