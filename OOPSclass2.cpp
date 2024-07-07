@@ -169,10 +169,39 @@ public:
     }
 };
 
+
+// creating class just for mcq ques, c is inherited from b, and b is inherited from a.
+class a
+{
+public:
+    a()
+    {
+        cout << "a is called" << endl;
+    }
+};
+
+class b : public a
+{
+public:
+    b()
+    {
+        cout << "b is called" << endl;
+    }
+};
+
+class c : public b
+{
+public:
+    c()
+    {
+        cout << "c is called" << endl;
+    }
+};
+
 int main()
 {
-    Human a;
-    a.getWeight();
+    Human h;
+    h.getWeight();
 
     Male m;
     m.printAge();
@@ -213,6 +242,15 @@ int main()
     Circle *obj2 = new Circle;
     obj2->a = 6;
     cout << obj2->area() << endl;
+
+
+    // MCQ ->
+    // a *obj = new a;
+    // a *obj = new b;     // this will first create variable of "a" type then create "b" type, means it will call the constructor of all inherited class, in the order of parent to child.
+    // b *obj = new a;   this will not work becaue it is creating a variable of "a" type and it expecting that it will return the property of "a" as well as "b" but it is not possible bcoz this variable only contains property of "a".
+    // b *obj = new b;
+    // a *obj = new c;
+    // c *obj = new a;    this will not work becaue it is creating a variable of "a" type and it expecting that it will return the property of "a" as well as "b" as well as "c" but it is not possible bcoz this variable only contains property of "a".
 
     return 0;
 }
