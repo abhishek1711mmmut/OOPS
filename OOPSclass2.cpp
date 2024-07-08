@@ -249,7 +249,7 @@ int main()
 
     // MCQ ->
     // a *obj = new a;
-    // a *obj = new b;     // this will first create variable of "a" type then create "b" type, means it will call the constructor of all inherited class, in the order of parent to child.
+    // a *obj = new b;     // this will first create variable of "a" type then create "b" type, means it will call the constructor of all inherited class, in the order of parent to child. If it is calling any function which is present in both child and parent class, then it will call the function of parent class
     // b *obj = new a;   // this will not work becaue it is creating a variable of "a" type and it expecting that it will return the property of "a" as well as "b" but it is not possible bcoz this variable only contains property of "a".
     // b *obj = new b;
     // a *obj = new c;
