@@ -4,6 +4,8 @@ using namespace std;
 class Human
 {
     // encapsulation -> information hiding (wrapping up data member and member function in a class), full encapsulation : class in which all data members are private
+    // encapsulation hide information
+    // abstraction hide implementation
 protected:
     int height;
     int weight;
@@ -35,6 +37,7 @@ class Male : protected Human
 // public is mode of inheritance (In java, we use extend instead of public)
 // Protected -> inherited dm & mf are only accessible inside this child class, they can not be accesible outside this class
 // Private member can not be inherited
+// Private vs Protected -> Protected can be inherited whereas private can not be inherited, protected are only accessible in parent or child class 
 {
 public:
     void printAge()
