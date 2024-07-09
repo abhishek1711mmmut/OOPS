@@ -1,3 +1,4 @@
+// Abstraction ->
 // Abstraction -> Bird *obj=new Ostrich; // in this example, we created a variable of bird type but we hide that which type of bird it is like whether it is penguin. ostrich or eagle.
 // 2nd example -> when we include <maths.h> header file, there is pow() function, now this fun. can be implemented in two way, either by loop or by recursion. When we use pow() func. from this header file, we don't know how it is implemented i.e., the implementation is hidden. This is Abstraction.
 // 3rd example -> sorting algo, Sort *obj=new QuickSort; // this will slow bcoz quicksort has worst case tc of O(n^2). So, Sort *obj=new MergeSort; just by changing one line of code, we can increase the speed.
@@ -42,7 +43,7 @@ private:
     {
         cout << "I'm in class A" << endl;
     }
-    friend class B; // friend class can access private and protected members of class in which they are declared that they are friend
+    friend class B; // friend class can access private and protected members of class in which they are declared as friend
 };
 
 class B
@@ -67,6 +68,36 @@ void printValue(Math temp)
 {
     cout << temp.value << endl;
 }
+
+// Make friend function of another class in a class -->
+
+// // Step 1: create class in which we'll mark friend function
+// class Math;
+// // Step 2: create another class and declare the friend function
+// class Trigo
+// {
+// public:
+//     void printValueTrigo(Math &temp);
+// };
+// // Step 3: now, define the first class
+// class Math
+// {
+// private:
+//     int value;
+
+// public:
+//     Math()
+//     {
+//         value = 150;
+//     }
+
+//     friend void Trigo::printValueTrigo(Math &m);
+// };
+// // Step 4: define the friend function
+// void Trigo::printValueTrigo(Math &temp)
+// {
+//     cout << temp.value << endl;
+// }
 
 int main()
 {

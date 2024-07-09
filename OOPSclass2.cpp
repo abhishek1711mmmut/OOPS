@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
+// Pillars of OOPS
+// Abstraction
+// Encapsulation
+// Inheritance
+// Polymorphism
+
 class Human
 {
     // encapsulation -> information hiding (wrapping up data member and member function in a class), full encapsulation : class in which all data members are private
@@ -104,6 +110,7 @@ class Dog3 : Animal
 // Hybrid inheritance -> combination of multiple and multilevel inheritance
 
 // Polymorphism -> existing in multiple forms (many form)
+// Two types of Polymorphism are below ->
 // Compile time (static) : function and operator overloading
 // Run time (dynamic) : Overriding
 
@@ -125,6 +132,7 @@ public:
     {
         return a + b + value;
     }
+    // this is an example of polymorphism since the add function exist in more than one form
 };
 
 // operator overloading
